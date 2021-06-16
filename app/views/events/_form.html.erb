@@ -1,6 +1,6 @@
-<% form_with(model: event) do |form| %>
-  <% form.text_area "title", placeholder: "Event Title" %>
-  <% form.text_area "body" placeholder: "Description" %>
-  <% form.date_field "date" %>
-  <% form.submit %>
+<%= form_with(model: @event) do |form| %>
+  <%= form.text_area :title, placeholder: "Event Title" %>
+  <%= form.text_area :body, placeholder: "Description" %>
+  <%= form.date_field :date %>
+  <%= form.submit %>
 <% end %>

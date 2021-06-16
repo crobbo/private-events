@@ -36,6 +36,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event
+  end
+
 
   private
 

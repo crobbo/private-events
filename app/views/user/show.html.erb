@@ -1,7 +1,0 @@
-<% if @user.event.empty? %>
-  <p> User has no upcoming events</p>
-<% else %>
-  <% @user.event.each |event| %>
-  <% link_to event event_path(event) %>
-<% end %>
-

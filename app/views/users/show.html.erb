@@ -1,0 +1,10 @@
+<% if @user.events.empty? %>
+  <p> User has no upcoming events</p>
+<% else %>
+
+  <% @user.events.each do |event| %>
+    <%= event.title %>
+  <% end %>
+
+<% end %>
+
