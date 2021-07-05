@@ -4,4 +4,13 @@
   <%= @event.body %>
   <%= @event.date %>
 
+  
+
+  <%= button_to "Attend Event", event_registrations_path(:event_id => @event.id) %>
+
+
+
 </div>
+
+
+
