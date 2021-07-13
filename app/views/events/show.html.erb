@@ -2,9 +2,12 @@
 
   <%= @event.title %>
   <%= @event.body %>
+
   <%= @event.date %>
 
-  
+  <% @event.attendees.each do |attendee| %>
+  <%= attendee.email %>
+  <% end %>
 
   <%= button_to "Attend Event", event_registrations_path(:event_id => @event.id) %>
 
