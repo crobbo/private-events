@@ -16,6 +16,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
   font-family: 'Lato', sans-serif;
@@ -26,13 +28,13 @@ header {
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-   background-color: #ffba75;
+   background-color: #00d0ea;
    width: 100%;
  }
 
  .text-logo {
    color: white;
-   font-weight: 600;
+   font-weight: 800;
    font-size: 1em;
    letter-spacing: 1px;
    margin: 5px 5px 5px 20px;
@@ -46,7 +48,7 @@ header {
    width: 30%;
    font-weight: 500;
    margin-right: 10px;
- }
+ } 
 
  a {
    text-decoration: none;
@@ -60,6 +62,90 @@ header {
    border-radius: 5px;
  }
 
+ .container {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   margin-right: 15px;
+   margin-left: 15px;
+   margin-top: 15px;
+ }
+
+ .heading {
+   font-size: 1.4em;
+   color: #002b7c;
+   font-weight: 700;
+   margin-bottom: 25px;
+ }
+
+ .events-grid {
+   display: flex;
+   flex-direction: column;
+  }
+
+ .event-card {
+   border-radius: 5px;
+   background-color: #f0eeeb;
+   box-shadow: rgba(220, 181, 181, 0.1) 0px 0.5em 1em -0.125em, rgba(10, 10, 10, 0.02) 0px 0px 0px 1px;
+   margin-bottom: 27px;
+   padding: 25px;
+ }
+
+ .event-title {
+   font-size: 1.2em;
+   color: #002b7c;
+   font-weight: 700;
+   margin-bottom: 15px;
+ }
+
+ .event-time {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #002b7c;
+  margin-bottom: 15px;
+ }
+
+ .event-btn {
+  border: 1px solid #0072b1;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px; 
+  text-align: center;
+  // margin-top: 10px;
+  color: #0072b1;
+  }
+
+  .fa-calendar {
+    margin-right: 5px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-1 {
+    width: 71%;
+  }
+
+  hr {
+    background-color: whitesmoke;
+    border: none;
+    display: block;
+    height: 2px;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .past-events {
+    display: block;
+    width: 100%;   
+  }
+
+  .past-event {
+    text-align: left;
+  }
+
 @media (min-width: 320px) {
    .nav-links {
     display: flex;
@@ -72,7 +158,7 @@ header {
 
   .text-logo {
     color: white;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.5em;
     letter-spacing: 1px;
     margin: 5px 5px 5px 20px;
@@ -90,22 +176,31 @@ header {
     border-radius: 5px;
     margin-left: 10px;
   }
- 
+
+  .heading {
+    font-size: 1.6em;
+  }
+
+  .event-title {
+    font-size: 1.4em;
+  }
+
+  .event-time {
+    font-size: 1em;
+  }
+
+  .event-btn {
+    font-size: 1.2em;
+  }
 } 
 
 @media (min-width: 640px) {
+
   .nav-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
-    font-weight: 500;
-  }
-
-  .text-logo {
-    color: white;
-    font-weight: 600;
     font-size: 36px;
     letter-spacing: 1px;
     margin: 5px 5px 5px 20px;
@@ -116,9 +211,32 @@ header {
     font-size: 1rem;
     color: #4b4e4f;
   }
+
+  .heading {
+    font-size: 1.8em;
+  }
+
+  .event-title {
+    font-size: 1.6em;
+  }
+
+  .event-time {
+    font-size: 1.2em;
+  }
+
+  .event-btn {
+    font-size: 1.4em;
+    padding: 5px 10px 5px 10px; 
+  }
+
 }
 
 @media (min-width: 768px) {
+  
+  .text-logo {
+    font-size: 1.8em
+  }
+  
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -126,6 +244,38 @@ header {
     justify-content: space-evenly;
     width: 20%;
     font-weight: 500;
+  }
+
+  .container {
+    align-items: center;  
+  }
+
+  .heading {
+    width: 75%;
+    text-align: left;
+    margin-left: 25px;
+    font-size: 2em
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 75%;
+  }
+
+  .event-card {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .event-title {
+    margin-bottom: 27px;
+  }
+
+  .event-time {
+    margin-bottom: 27px;
   }
 }
 
@@ -158,7 +308,6 @@ header {
     font-size: 20px;
     color: #4b4e4f;
   }
- 
 }
 
 @media (min-width: 1280px) {
