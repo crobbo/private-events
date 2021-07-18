@@ -8,9 +8,14 @@
   <div>
     <h1 class="text-logo">PrivateEvents</h1>
   </div>
+
   <div class="nav-links">
-    <a id="log-in-text" href="">Log In</a>
-    <a id="btn" href="">Sign Up</a>
+    <% if user_signed_in? %>
+      <a id="log-in-text" href=""><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></a>
+    <% else %>
+      <a id="log-in-text" href=""><%= link_to 'Log In', new_user_session_path %></a>
+      <a id="btn" href="">Sign Up</a>
+    <% end %>
   </div>
 </header>
 
@@ -69,11 +74,9 @@
   <div class="container-1">
    <hr> 
      <div class="past-events">
-    <p class="past-event">Test</p>
-    <p class="past-event">Test</p>
-    <p class="past-event">Test</p>
-    <p class="past-event">Test</p>
-    <p class="past-event">Test</p>
+    <p class="past-event">Jade's birthday on 3rd July 2021<i class="fa fa-info-circle" aria-hidden="true"></i></p>
+    <p class="past-event">European Cuop Final on May 20th 2021 <i class="fa fa-info-circle" aria-hidden="true"></i></p>
+    <p class="past-event">Prime Minister's Questions on 30th June 2021 <i class="fa fa-info-circle" aria-hidden="true"></i></p>
   </div>
 
   </div>
