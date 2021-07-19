@@ -152,8 +152,8 @@ header {
    .nav-links {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
     width: 30%;
     font-weight: 500;
   }
@@ -293,7 +293,7 @@ header {
 
   #btn {
     background-color: white;
-    padding: 10px 12px 10px 12px;
+    padding: 0px 12px 10px 12px;
     border-radius: 5px;
   }
 
