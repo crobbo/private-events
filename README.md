@@ -6,6 +6,8 @@ This is an Odin Project to build a private event site simialr to Eventbrite, whi
 
 # Live Demo
 
+[Click here](https://enigmatic-plains-76896.herokuapp.com/) to view live website
+
 # Reflection
 # README
 
