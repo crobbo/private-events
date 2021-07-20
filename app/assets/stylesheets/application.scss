@@ -158,32 +158,21 @@ header {
     width: 100%;
     border-radius: 5px;
     height: 2.5em;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
   }
-
-
 
   // Sign-up page & Log In pages
 
-
-
-
-.form-container {
+  .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
 }
 
-.sign-up-heading {
-  font-size: 1.4em;
-  color: #002b7c;
-  font-weight: 700;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-
-.log-in-heading {
+.form-heading {
   font-size: 1.4em;
   color: #002b7c;
   font-weight: 700;
@@ -192,7 +181,7 @@ header {
 }
 
 .new_user {
-  width: 75%;
+  width: 80%;
 }
 
 .form-field {
@@ -214,6 +203,10 @@ header {
   border: 2px solid #0072b1;
 }
 
+.tip-text {
+  color:rgb(238, 60, 60);
+  margin-bottom: 10px;
+}
 
 @media (min-width: 320px) {
    .nav-links {
@@ -261,17 +254,18 @@ header {
   .event-btn {
     font-size: 1.2em;
   }
-} 
 
-// sign-up page
+  // sign-up page
 
-.sign-up-heading {
+.form-heading {
   font-size: 1.6em;
 }
 
 .new_user {
   width: 75%;
 }
+
+} 
 
 @media (min-width: 640px) {
 
@@ -308,16 +302,16 @@ header {
     padding: 5px 10px 5px 10px; 
   }
 
-}
-
 // sign-up page
 
-.sign-up-heading {
+.form-heading {
   font-size: 1.8em;
 }
 
 .new_user {
   width: 60%;
+}
+
 }
 
 @media (min-width: 768px) {
@@ -365,18 +359,19 @@ header {
   .event-time {
     margin-bottom: 27px;
   }
-}
 
 // sign-up page
 
-.sign-up-heading {
+.form-heading {
   font-size: 2em;
-  width: 100%;
 }
 
 .new_user {
-  width: 40%;
+  width: 50%;
 }
+}
+
+
 
 @media (min-width: 1024px) {
   .nav-links {

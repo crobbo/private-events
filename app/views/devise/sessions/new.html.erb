@@ -4,16 +4,16 @@
 
 
 <div class="form-container">
-<h2 class="log-in-heading">Log in</h2>
+<h2 class="form-heading">Log in</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=>"form-field" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=>"form-field", placeholder: "user@email.com" %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password", :class=>"form-field" %>
+    <%= f.password_field :password, autocomplete: "current-password", :class=>"form-field",placeholder: "password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -22,6 +22,8 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
+  <br>
+  <p class="tip-text"><strong>TEST</strong>: Use placeholder text to login 😉</p>
 
   <div class="actions">
     <%= f.submit "Log in", :class=>'btn' %>

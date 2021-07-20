@@ -1,6 +1,14 @@
-<%= form_with(model: @event) do |form| %>
-  <%= form.text_area :title, placeholder: "Event Title" %>
-  <%= form.text_area :body, placeholder: "Description" %>
-  <%= form.date_field :date %>
-  <%= form.submit %>
-<% end %>
+
+<%= render 'events/navbar' %>
+
+<div class="form-container">
+  <h2 class="form-heading">Add New Event</h2>
+    <%= form_with(model: @event, :class=>"new_user") do |form| %>
+      <%= form.text_area :title, placeholder: "Event Title", :class=>'form-field' %>
+      <%= form.text_area :body, placeholder: "Description", :class=>'form-field' %>
+      <%= form.date_field :date, :class=>'form-field'%>
+      <%= form.submit "Add Event", class: "btn" %>
+    <% end %>
+</div>
+
+
