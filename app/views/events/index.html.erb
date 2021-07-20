@@ -8,13 +8,15 @@
 
 
   <div class="events-grid">
-  <% @events.each do |event| %>
-        <div class="event-card">
-          <h3 class="event-title"> <%= event.title %> </h3>
-          <p class="event-time"><span><i class="fa fa-calendar" aria-hidden="true"></i></span> <%= event.date%> </p>
-          <div class="event-btn">Event Details</div>        
-        </div>
-        <% end %>
+      <% @events.each do |event| %>
+        <% if !event.date.past? %>
+              <div class="event-card">
+                <h3 class="event-title"> <%= event.title %> </h3>
+                <p class="event-time"><span><i class="fa fa-calendar" aria-hidden="true"></i></span> <%= event.date%> </p>
+                <div class="event-btn">Event Details</div>        
+              </div>
+        <% end %>     
+      <% end %>
     </div>
 </div>
 
@@ -24,9 +26,20 @@
    <hr> 
      <div class="past-events">
      <h1 class="heading-2">Past Events</h1>
+
+     <% @events.each do |event|%>
+      <% if event.date.past? %>
+        <p class="past-event"> 
+          <%= event.title %> on <%= event.date %> 
+        </p>
+      <% end %>
+     <% end %>
+     
+
+<%#      
     <p class="past-event">Jade's birthday on 3rd July 2021<i class="fa fa-info-circle" aria-hidden="true"></i></p>
     <p class="past-event">European Cup Final on May 20th 2021 <i class="fa fa-info-circle" aria-hidden="true"></i></p>
-    <p class="past-event">Prime Minister's Questions on 30th June 2021 <i class="fa fa-info-circle" aria-hidden="true"></i></p>
+    <p class="past-event">Prime Minister's Questions on 30th June 2021 <i class="fa fa%-info-circle" aria-hidden="true"></i></p> %>
   </div>
 
   </div>
