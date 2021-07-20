@@ -116,7 +116,6 @@ header {
   border-radius: 4px;
   padding: 5px 10px 5px 10px; 
   text-align: center;
-  // margin-top: 10px;
   color: #0072b1;
   }
 
@@ -161,7 +160,12 @@ header {
     height: 2.5em;
   }
 
-  // Sign-up page
+
+
+  // Sign-up page & Log In pages
+
+
+
 
 .form-container {
     display: flex;
@@ -175,6 +179,16 @@ header {
   color: #002b7c;
   font-weight: 700;
   margin-bottom: 25px;
+  text-align: center;
+}
+
+
+.log-in-heading {
+  font-size: 1.4em;
+  color: #002b7c;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .new_user {
@@ -199,6 +213,7 @@ header {
   margin-bottom: 10px;
   border: 2px solid #0072b1;
 }
+
 
 @media (min-width: 320px) {
    .nav-links {
@@ -356,6 +371,7 @@ header {
 
 .sign-up-heading {
   font-size: 2em;
+  width: 100%;
 }
 
 .new_user {
