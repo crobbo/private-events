@@ -23,12 +23,7 @@ class EventsController < ApplicationController
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-
-  def show
-    @event
-  end
+  end 
 
   private
 

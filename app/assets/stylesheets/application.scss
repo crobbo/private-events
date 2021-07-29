@@ -54,6 +54,7 @@ header {
    text-decoration: none;
    font-size: 0.5em;
    color: #4b4e4f;
+
  }
 
  #btn {
@@ -117,7 +118,18 @@ header {
   padding: 5px 10px 5px 10px; 
   text-align: center;
   color: #0072b1;
+  letter-spacing: 2px;
   }
+
+  .event-btn:hover {
+    border: 1px solid #0072b1;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px; 
+    text-align: center;
+    color: #0072b1;
+    letter-spacing: 2px;
+    background-color: #cfe4e7;
+    }
 
   .fa-calendar {
     margin-right: 5px;
@@ -130,7 +142,7 @@ header {
   }
 
   .container-1 {
-    width: 71%;
+    width: 85%;
     margin-bottom: 50px;
   }
 
@@ -147,6 +159,7 @@ header {
     display: block;
     width: 100%;
     color: #0072b1;
+    font-size: 0.75em;
   }
 
   .past-event {
@@ -208,6 +221,74 @@ header {
   margin-bottom: 10px;
 }
 
+// Event show page
+
+.container-show-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+}
+
+.heading-3 {
+  font-size: 1.2em;
+  color: #002b7c;
+  font-weight: 800;
+  margin-bottom: 25px;
+  margin-top: 30px;
+  letter-spacing: 3px;
+}
+
+.event-subheading {
+  align-self: flex-start;
+  color: #002b7c;
+  font-size: 1em;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+#first-sub {
+  margin-top: 0px;
+}
+
+.event-text {
+  align-self: flex-start;
+  color: #0072b1;
+  font-size: 0.75em;
+  margin-bottom: 10px;
+}
+
+#no-attendee {
+  color: rgb(240, 68, 208);
+  font-style: italic;
+}
+
+#attend-btn {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: #002b7c;
+}
+
+#attend-btn:hover {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: #3e65ae;
+}
+
+#details-btn {
+  color: #002b7c;
+}
+
 @media (min-width: 320px) {
    .nav-links {
     display: flex;
@@ -265,6 +346,27 @@ header {
   width: 75%;
 }
 
+// event show page
+.event-details {
+  width: 77%;
+}
+
+.heading-3 {
+  font-size: 1.6em;
+}
+
+.event-text {
+  align-self: flex-start;
+  color: #0072b1;
+  font-size: 0.85em;
+}
+
+.past-events {
+  font-size: 0.85em;
+}
+
+
+
 } 
 
 @media (min-width: 640px) {
@@ -283,6 +385,10 @@ header {
     text-decoration: none;
     font-size: 1rem;
     color: #4b4e4f;
+  }
+
+  #details-btn {
+    color: #002b7c;
   }
 
   .heading {
@@ -311,6 +417,26 @@ header {
 .new_user {
   width: 60%;
 }
+
+// event show page
+
+.heading-3 {
+  font-size: 2.2em;
+  margin-top: 75px;
+}
+.event-subheading {
+  font-size: 1.4em;
+}
+
+.event-text {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.past-events {
+  font-size: 1.1em;
+}
+
 
 }
 
@@ -365,9 +491,26 @@ header {
 .form-heading {
   font-size: 2em;
 }
+margin-top: 75px;
 
-.new_user {
-  width: 50%;
+.event-details {
+  width: 65%;
+}
+
+.heading-3 {
+  font-size: 2.6em;
+}
+
+.event-subheading {
+  font-size: 1.7em;
+}
+
+.event-text {
+  font-size: 1.2em;
+}
+
+.past-events {
+  font-size: 1.2em;
 }
 }
 
@@ -389,7 +532,9 @@ header {
     border-radius: 5px;
   }
 
-  .text-logo {
+  .text-logo {.past-events {
+    font-size: 0.85em;
+  }
     color: white;
     font-weight: 600;
     font-size: 40px;
@@ -401,6 +546,24 @@ header {
     text-decoration: none;
     font-size: 20px;
     color: #4b4e4f;
+  }
+
+  // Event Show page
+
+  .event-details {
+    width: 60%;
+  }
+
+  .event-subheading {
+    font-size: 2em;
+  }
+
+  .event-text {
+    font-size: 1.5em;
+  }
+
+  .past-events {
+    font-size: 1.5em;
   }
 }
 

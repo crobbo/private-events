@@ -1,19 +1,28 @@
-<div>
+<%= render 'events/navbar' %>
 
-  <%= @event.title %>
-  <%= @event.body %>
+<div class="container-show-page">
+    <div class="event-details">
 
-  <%= @event.date %>
+      <h1 class="heading-3"><%= @event.title.upcase %></h1>
+      <h3 class="event-subheading" id="first-sub">About This Event:</h3>
+      <p class="event-text"><%= @event.body %></p>
+      <h3 class="event-subheading">Date:</h3>
+      <p class="event-text"><%= @event.date %></p>
 
-  <% @event.attendees.each do |attendee| %>
-  <%= attendee.email %>
-  <% end %>
+      <h3 class="event-subheading">Attendees:</h3>
+        <% if @event.attendees.empty? %>
+              <p class="event-text" id="no-attendee"> No attendees, be the first! </p>
+        <% else %>
+              <% unique_attendees = @event.attendees.uniq %>
+              <% unique_attendees.each do |attendee| %>
+                  <p class="event-text" ><%= attendee.email %></p>
+              <% end %>
+        <% end %>
 
-  <%= button_to "Attend Event", event_registrations_path(:event_id => @event.id) %>
 
+      <%= button_to "ATTEND EVENT", event_registrations_path(:event_id => @event.id), :class=>"event-btn", :id=>"attend-btn"%>
 
-
+    </div>
 </div>
 
-
-
+<%= render 'events/footer' %>
